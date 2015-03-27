@@ -67,25 +67,21 @@ $(combo_2nd_arch_prefix)TARGET_STRIP := $($(combo_2nd_arch_prefix)TARGET_TOOLS_P
 
 $(combo_2nd_arch_prefix)TARGET_NO_UNDEFINED_LDFLAGS := -Wl,--no-undefined
 
-<<<<<<< HEAD
+
 $(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    -O3 \
-=======
+
 # ArchiDroid
 include $(BUILD_SYSTEM)/archidroid.mk
 
 $(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    $(ARCHIDROID_GCC_CFLAGS_ARM) \
->>>>>>> a062cc6... JustArchi's ArchiDroid Optimizations V4
                         -fomit-frame-pointer \
                         -fstrict-aliasing    \
                         -funswitch-loops
 
 # Modules can choose to compile some source as thumb.
 $(combo_2nd_arch_prefix)TARGET_thumb_CFLAGS :=  -mthumb \
-<<<<<<< HEAD
                         -O3 \
-=======
                         $(ARCHIDROID_GCC_CFLAGS_THUMB) \
->>>>>>> a062cc6... JustArchi's ArchiDroid Optimizations V4
                         -fomit-frame-pointer \
                         -fno-strict-aliasing
 
@@ -126,7 +122,6 @@ $(combo_2nd_arch_prefix)TARGET_GLOBAL_CFLAGS += \
 			-include $(android_config_h) \
 			-I $(dir $(android_config_h))
 
-<<<<<<< HEAD
 # More flags/options can be added here
 TARGET_GLOBAL_CFLAGS += \
 			-DNDEBUG \
@@ -142,7 +137,7 @@ TARGET_GLOBAL_CFLAGS += \
 			-fno-inline-functions \
 			-funroll-loops \
 			-mvectorize-with-neon-quad
-=======
+
 # The "-Wunused-but-set-variable" option often breaks projects that enable
 # "-Wall -Werror" due to a commom idiom "ALOGV(mesg)" where ALOGV is turned
 # into no-op in some builds while mesg is defined earlier. So we explicitly
@@ -151,7 +146,7 @@ ifneq ($(filter 4.6 4.6.% 4.7 4.7.% 4.8 4.8.% 4.9 4.9.%, $($(combo_2nd_arch_pref
 $(combo_2nd_arch_prefix)TARGET_GLOBAL_CFLAGS += -fno-builtin-sin \
 			-fno-strict-volatile-bitfields
 endif
->>>>>>> a062cc6... JustArchi's ArchiDroid Optimizations V4
+
 
 # This is to avoid the dreaded warning compiler message:
 #   note: the mangling of 'va_list' has changed in GCC 4.4
@@ -176,8 +171,7 @@ $(combo_2nd_arch_prefix)TARGET_GLOBAL_CFLAGS += -mthumb-interwork
 
 $(combo_2nd_arch_prefix)TARGET_GLOBAL_CPPFLAGS += -fvisibility-inlines-hidden
 
-<<<<<<< HEAD
-=======
+
 # More flags/options can be added here
 $(combo_2nd_arch_prefix)TARGET_RELEASE_CFLAGS := \
 			-DNDEBUG \
@@ -186,7 +180,6 @@ $(combo_2nd_arch_prefix)TARGET_RELEASE_CFLAGS := \
 			-frerun-cse-after-loop \
 			-frename-registers
 
->>>>>>> a062cc6... JustArchi's ArchiDroid Optimizations V4
 libc_root := bionic/libc
 libm_root := bionic/libm
 libstdc++_root := bionic/libstdc++
