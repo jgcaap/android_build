@@ -57,11 +57,4 @@ fi
 echo "ro.build.characteristics=$TARGET_AAPT_CHARACTERISTICS"
 
 echo "ro.cm.device=$CM_DEVICE"
-
-echo "#Added by jgcaap"
-echo "profiler.force_disable_err_rpt=1"
-echo "profiler.force_disable_ulog=1"
-echo "logcat.live=disable"
-echo "ro.config.nocheckin=1"
-echo "persist.call_recording.enabled=true"
 echo "# end build properties"
